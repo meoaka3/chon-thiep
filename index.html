@@ -117,12 +117,48 @@
       }
 
       .card {
+        position: relative;
         min-width: 0;
         overflow: hidden;
         border: 1px solid var(--line);
         border-radius: 18px;
         background: var(--card);
         box-shadow: 8px 10px 14px rgb(0 0 0 / 28%);
+      }
+
+      .card-badges {
+        position: absolute;
+        z-index: 6;
+        top: 18px;
+        left: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        pointer-events: none;
+      }
+
+      .card-badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 5px 11px;
+        border: 1px solid rgb(255 255 255 / 78%);
+        border-radius: 999px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: .08em;
+        line-height: 1;
+        text-transform: uppercase;
+        box-shadow: 0 4px 9px rgb(0 0 0 / 24%);
+      }
+
+      .card-badge--best {
+        background: linear-gradient(135deg, #e7bd55, #9c5b0b);
+      }
+
+      .card-badge--hot {
+        background: linear-gradient(135deg, #ed4356, #9a0e2b);
       }
 
       .preview {
@@ -265,6 +301,9 @@
 
       <section class="cards" aria-label="Các mẫu thiệp cưới">
         <article class="card">
+          <div class="card-badges" aria-label="Mẫu nổi bật">
+            <span class="card-badge card-badge--hot"><span aria-hidden="true">🔥</span> Hot</span>
+          </div>
           <div class="preview">
             <img class="desktop-preview" src="assets/images/image1.png" alt="Mẫu thiệp Vintage">
             <img class="phone-preview" src="assets/images/image2.jpg" alt="Mẫu thiệp Vintage trên điện thoại">
@@ -289,6 +328,9 @@
         </article>
 
         <article class="card">
+          <div class="card-badges" aria-label="Mẫu nổi bật">
+            <span class="card-badge card-badge--hot"><span aria-hidden="true">🔥</span> Hot</span>
+          </div>
           <div class="preview">
             <img class="desktop-preview" src="assets/images/image5.png" alt="Mẫu thiệp Sweet">
             <img class="phone-preview" src="assets/images/image6.jpg" alt="Mẫu thiệp Sweet trên điện thoại">
@@ -325,6 +367,9 @@
         </article>
 
         <article class="card">
+          <div class="card-badges" aria-label="Mẫu nổi bật">
+            <span class="card-badge card-badge--hot"><span aria-hidden="true">🔥</span> Hot</span>
+          </div>
           <div class="preview">
             <img class="desktop-preview" src="assets/images/image11.png" alt="Mẫu thiệp Romance">
             <img class="phone-preview" src="assets/images/image12.jpg" alt="Mẫu thiệp Romance trên điện thoại">
